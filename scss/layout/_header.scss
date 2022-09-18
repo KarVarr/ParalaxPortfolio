@@ -1,0 +1,40 @@
+.header {
+  position: relative;
+  .layers {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    .layers__text {
+      z-index: 1;
+      .text__caption {
+      }
+      .text__title {
+      }
+    }
+    .layer {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-size: cover;
+      background-position: center;
+    }
+    .layers__base {
+      background-image: url(../../img/layer-base.png);
+      transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
+    }
+    .layers__middle {
+      background-image: url(../../img/layer-middle.png);
+      transform: translate3d(0, calc(var(--scrollTop) / 2.6), 0);
+
+    }
+    .layers__front {
+      background-image: url(../../img/layer-front.png);
+      transform: translate3d(0, calc(var(--scrollTop) / 5.6), 0);
+
+    }
+  }
+}

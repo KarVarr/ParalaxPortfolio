@@ -16,10 +16,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const showSlider = new Swiper('.showcase-carousel', {
     loop: true,
-    slidesPerView: 3,  //how many sliders on the screen
+    slidesPerView: 3, //how many sliders on the screen
     speed: 1800,
     centeredSlides: true,
-  })
+    navigation: {
+      nextEl: '.showcase-navigation-next',
+      prevEl: '.showcase-navigation-prev',
+    },
+  });
 
   document.querySelector('video').playbackRate = 2;
 });

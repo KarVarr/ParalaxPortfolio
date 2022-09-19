@@ -12,6 +12,7 @@
     transition: $transition;
 
     .main__article__title {
+      font-family: assassin-st, sans-serif;
       font-size: calc($index * 1.8);
       font-weight: 700;
       text-transform: uppercase;

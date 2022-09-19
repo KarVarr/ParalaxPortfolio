@@ -4,17 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="parallax portfolio" />
     <link rel="shortcut icon" href="img/profileLogo.svg" type="image/x-icon" />
+    <!-- ----------TITILE---------- -->
     <title>Vardanian Karen Portfolio</title>
+    <!-- ----------CSS---------- -->
     <link rel="stylesheet" href="css/main.css" />
-    <script src="libs/gsap/gsap.min.js"></script>
-    <script src="libs/gsap/ScrollTrigger.min.js"></script>
-    <script src="libs/gsap/ScrollSmoother.min.js"></script>
+    <!-- ----------SWIPER---------- -->
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css" />
   </head>
 
   <body>
     <div class="wrapper">
       <div class="content">
+        <!-- ----------HEADER---------- -->
         <header class="header">
           <div class="layers">
             <div class="layers__text">
@@ -26,6 +29,7 @@
             <div class="layer layers__front"></div>
           </div>
         </header>
+        <!-- ----------ARTICLE-ABOUT---------- -->
 
         <section class="main__article">
           <div class="main__article--content">
@@ -39,9 +43,89 @@
             </p>
           </div>
         </section>
+        <!-- ----------SKILLS SWIPER---------- -->
+        <section class="showcase">
+          <h2 class="showcase__title">Hoodie <span>Mantle</span></h2>
+          <div class="showcase__content--wrapper">
+            <div class="showcase__content">
+              <div class="showcase-carousel">
+                <div class="swiper-wrapper">
+                    <!-- --------slider item------- -->
+                  <div class="swiper-slide showcase-carousel__item">
+                    <div class="showcase-carausel__image-wrapper">
+                      <div class="showcase-carousel__image-left">
+                        <div class="showcase-caraousel__image image1"></div>
+                      </div>
+                      <div class="showcase-carousel__image-right">
+                        <div class="showcase-caraousel__image image1"></div>
+                      </div>
+                    </div>
+
+                    <p>Front</p>
+                  </div>
+                   <!-- --------slider item------- -->
+                  <div class="swiper-slide showcase-carousel__item">
+                    <div class="showcase-carausel__image-wrapper">
+                      <div class="showcase-carousel__image-left">
+                        <div class="showcase-caraousel__image image2"></div>
+                      </div>
+                      <div class="showcase-carousel__image-right">
+                        <div class="showcase-caraousel__image image2"></div>
+                      </div>
+                    </div>
+
+                    <p>Front two</p>
+                  </div>
+                   <!-- --------slider item------- -->
+                  <div class="swiper-slide showcase-carousel__item">
+                    <div class="showcase-carausel__image-wrapper">
+                      <div class="showcase-carousel__image-left">
+                        <div class="showcase-caraousel__image image3"></div>
+                      </div>
+                      <div class="showcase-carousel__image-right">
+                        <div class="showcase-caraousel__image image3"></div>
+                      </div>
+                    </div>
+
+                    <p>Front side</p>
+                  </div>
+                   <!-- --------slider item------- -->
+                  <div class="swiper-slide showcase-carousel__item">
+                    <div class="showcase-carausel__image-wrapper">
+                      <div class="showcase-carousel__image-left">
+                        <div class="showcase-caraousel__image image4"></div>
+                      </div>
+                      <div class="showcase-carousel__image-right">
+                        <div class="showcase-caraousel__image image4"></div>
+                      </div>
+                    </div>
+
+                    <p>Front back</p>
+                  </div>
+                 
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <video
+            src="videos/smoke-background-optimized.mp4"
+            class="showcase__video"
+            autoplay
+            muted
+            loop
+          ></video>
+        </section>
+        <!-- ---------- SWIPER---------- -->
       </div>
     </div>
 
+    <!-- ----------JS---------- -->
+    <script src="libs/gsap/gsap.min.js"></script>
+    <script src="libs/gsap/ScrollTrigger.min.js"></script>
+    <script src="libs/gsap/ScrollSmoother.min.js"></script>
+    <script src="libs/swiper/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

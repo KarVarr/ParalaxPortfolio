@@ -97,7 +97,7 @@
         text-shadow: 3px 3px 5px $color-black;
         &:hover {
           text-shadow: 2px 2px 1px $color-black;
-          scale: 0.98;
+          transform: scale(0.98);
         }
       }
     }

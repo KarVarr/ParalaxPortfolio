@@ -89,7 +89,7 @@
       background: -webkit-linear-gradient(to right, #fdbb2d, #22c1c3);
       background: linear-gradient(to right, #fdbb2d, #22c1c3);
       box-shadow: $box-shadow-card;
-      
+
       a {
         color: $color-primary;
         font-size: 3rem;
@@ -100,7 +100,7 @@
         }
         &:hover {
           text-shadow: 2px 2px 1px $color-black;
-          scale: 0.98;
+          transform: scale(0.98);
         }
       }
     }

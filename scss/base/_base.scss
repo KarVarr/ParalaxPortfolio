@@ -1,7 +1,20 @@
 body {
   background-color: #010101;
-  color: #ffffff;
   font-family: raleway_f, sans-serif;
   font-size: 1.6rem;
   line-height: 1.55;
+
+  //hide the scrollbar
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+.container,
+.wrapper {
+  will-change: transform;
 }

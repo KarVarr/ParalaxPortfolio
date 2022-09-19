@@ -1,18 +1,56 @@
 .header {
   position: relative;
+  &::before {
+    content: '';
+    width: 100%;
+    height: calc($index * 10);
+    background-image: url(../../img/ground.png);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    bottom: calc($index * -4.5);
+    z-index: 10;
+    filter: brightness(0.5);
+  }
   .layers {
+    @include flexCenter;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
     position: relative;
     overflow: hidden;
     .layers__text {
+      margin: 0 0.3rem;
+
+      font-weight: 900;
+      color: $color-primary;
+      text-transform: uppercase;
+      text-shadow: 0 0 15px $color-secondary;
+      transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+      will-change: transform;
       z-index: 1;
+      position: relative;
+      transition: $transition;
+
+      //animation
+      -webkit-animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+        both;
+      animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
       .text__caption {
+        font-size: calc($index * 0.9);
+        letter-spacing: calc($index / 3.5);
+        @include respond(phone) {
+          font-size: calc($index * 1.2);
+        }
       }
       .text__title {
+        font-size: calc($index * 2);
+        letter-spacing: calc($index / 2);
+        margin-bottom: calc($index * 3);
+
+        @include respond(phone) {
+          font-size: calc($index * 2.5);
+          margin-bottom: calc($index * -0.5);
+        }
       }
     }
     .layer {
@@ -21,20 +59,54 @@
       position: absolute;
       background-size: cover;
       background-position: center;
+      will-change: transform;
+      z-index: 2;
+      transition: $transition;
     }
     .layers__base {
       background-image: url(../../img/layer-base.png);
       transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
+      z-index: 0;
     }
     .layers__middle {
       background-image: url(../../img/layer-middle.png);
       transform: translate3d(0, calc(var(--scrollTop) / 2.6), 0);
-
     }
     .layers__front {
       background-image: url(../../img/layer-front.png);
       transform: translate3d(0, calc(var(--scrollTop) / 5.6), 0);
-
     }
+  }
+}
+
+.text-flicker-in-glow {
+  -webkit-animation: text-flicker-in-glow 4s linear both;
+  animation: text-flicker-in-glow 4s linear both;
+}
+
+//Animation
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
   }
 }

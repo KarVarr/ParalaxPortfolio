@@ -1,0 +1,12 @@
+//For text and margin
+$index: calc(1vw + 1vh);
+
+//For blocks
+$parallax-effect: translate3d(0, calc(var(--scrollTop) / 20), 0);
+
+//transition
+$transition: transform .75s cubic-bezier(.075, .5, 0, 1);
+
+//color
+$color-primary: #e7e7d3;
+$color-secondary: #9e7d35;

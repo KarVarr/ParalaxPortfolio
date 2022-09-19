@@ -3,8 +3,12 @@
   position: relative;
   color: $color-white;
   overflow: hidden;
-  background-image: url(../img/dungeon2.jpeg);
-
+  background-image: url(../img/dungeon3.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+  filter: saturate(.7);
   &::before {
     content: '';
     width: 100%;
@@ -68,10 +72,13 @@
     .showcase__content {
       .showcase-carousel {
         .swiper-wrapper {
-          transition: $transitionSliderWrapper;
+          transition: $transitionSlider;
           .showcase-carousel__item.swiper-slide-active {
             opacity: 0.95;
             transform: scale(0.75);
+            @include respond(phone) {
+              transform: scale(0.9);
+            }
           }
 
           .showcase-carousel__item {
@@ -122,6 +129,7 @@
                   background-size: contain;
                   background-position: center;
                   background-repeat: no-repeat;
+                  filter: drop-shadow(0 5px 10px $color-black);
                 }
 
                 .image1 {
@@ -190,15 +198,7 @@
     }
   }
 
-  .showcase__video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.4;
-  }
+  
 }
 
 //animation

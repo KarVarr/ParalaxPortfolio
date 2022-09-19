@@ -1,0 +1,68 @@
+.footer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: relative;
+  color: $color-white;
+  overflow: hidden;
+  background-image: url(../img/dungeon7.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  &::before {
+    content: '';
+    width: 100%;
+    height: calc($index * 10);
+    background-image: url(../img/ground.png);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: calc($index * -5.5);
+    z-index: 10;
+    filter: brightness(0.8);
+  }
+  .footer__img {
+    margin-top: 10rem;
+    max-width: 25rem;
+    justify-self: start;
+    transition: $transitionPulse;
+    will-change: transform;
+    @include respond(phone) {
+      margin-top: 10rem;
+      max-width: 29rem;
+    }
+
+    img {
+      border-radius: 15rem 15rem 1rem 1rem;
+      box-shadow: 0 0 30rem $color-ligth;
+      filter: brightness(0.9);
+      filter: saturate(0.3);
+      animation: imgPulse 4s infinite;
+    }
+  }
+  .showcase__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+    z-index: 2;
+  }
+}
+
+@keyframes imgPulse {
+  0% {
+    box-shadow: 0 0 30rem $color-ligth;
+  }
+
+  50% {
+    box-shadow: 0 0 0.3rem $color-ligth;
+  }
+  100% {
+    box-shadow: 0 0 30rem $color-ligth;
+  }
+}

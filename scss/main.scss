@@ -4,14 +4,11 @@
 @import 'base/base';
 @import 'base/reset';
 @import 'base/text';
-//@import 'base/botton';
 
 @import 'components/article';
 @import 'components/skills';
-// @import 'components/plan';
-// @import 'components/hassle';
-// @import 'components/input';
+@import 'components/portfolio';
+@import 'components/education';
 
 @import 'layout/header';
-// @import 'lyaout/footer';
-// @import 'lyaout/nav';
+@import 'layout/footer';

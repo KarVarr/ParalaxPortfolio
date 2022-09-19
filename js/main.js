@@ -13,7 +13,6 @@ ScrollSmoother.create({
 
 //video
 document.addEventListener('DOMContentLoaded', function () {
-
   const showSlider = new Swiper('.showcase-carousel', {
     loop: true,
     slidesPerView: 3, //how many sliders on the screen
@@ -24,6 +23,4 @@ document.addEventListener('DOMContentLoaded', function () {
       prevEl: '.showcase-navigation-prev',
     },
   });
-
-  document.querySelector('video').playbackRate = 2;
 });

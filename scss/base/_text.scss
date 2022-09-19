@@ -12,3 +12,21 @@
     font-family: assassin-st;
     src: url(../fonts/assassin.woff2);
 }
+
+
+.portfolio__title, .education__title, .info__title, .info__social   {
+    align-self: start;
+    color: $color-primary;
+    font-family: assassin-st, sans-serif;
+    font-size: calc($index * 1.8);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px $color-secondary;
+    letter-spacing: calc($index / 4.5);
+    transform: $parallax-effect;
+    will-change: transform;
+    @include respond(phone) {
+      font-size: calc($index * 3);
+    }
+  }

@@ -5,6 +5,7 @@ $index: calc(1vw + 1vh);
 $parallax-effect: translate3d(0, calc(var(--scrollTop) / 20), 0);
 
 //transition
+$transitionPulse: transform 5s ease-in-out;
 $transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
 $transitionSlider: cubic-bezier(0.4, 0, 0, 1);
 $transitionSliderWrapper: cubic-bezier(0.7, -0.18, 0.04, 1.36
@@ -17,9 +18,13 @@ $color-secondary: #9e7d35;
 $color-orange: #cc8869;
 $color-black: #000000;
 $color-white: #ffffff;
+$color-blue: #3ea6aa;
+$color-ligth: #f8d229;
+
 
 //paddding
 $padding12: 12rem 0;
 
 
-
+       
+$box-shadow-card:  8px 8px 18px $color-black;

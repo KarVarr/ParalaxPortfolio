@@ -36,18 +36,41 @@ text.addEventListener('mouseover', e => {
 });
 
 //swiper JS
-var swiper = new Swiper('.mySwiper', {
+var swiper = new Swiper('.mySwiper1', {
   slidesPerView: 1,
   spaceBetween: 50,
   slidesPerGroup: 1,
   loop: true,
+
   loopFillGroupWithBlank: true,
   pagination: {
-    el: '.swiper-pagination',
+    el: '.swiper-pagination1',
     clickable: true,
   },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+});
+
+var swiper = new Swiper('.mySwiper2', {
+  slidesPerView: 1,
+  spaceBetween: 50,
+  slidesPerGroup: 1,
+  loop: true,
+
+  loopFillGroupWithBlank: true,
+  pagination: {
+    el: '.swiper-pagination2',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper2-button-next',
+    prevEl: '.swiper2-button-prev',
+  },
+});
+
+var swiper = new Swiper('.mySwiper3', {
+  effect: 'cards',
+  grabCursor: true,
 });

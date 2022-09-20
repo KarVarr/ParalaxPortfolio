@@ -10,7 +10,6 @@
     margin: 0 2.5rem;
     text-align: center;
     transition: $transition;
-
     .main__article__title {
       font-family: assassin-st, sans-serif;
       font-size: calc($index * 1.8);
@@ -27,11 +26,11 @@
       }
     }
     .main__article__subtitle {
-      max-width: 70rem;
       font-size: calc($index * 1);
       transform: $parallax-effect;
       will-change: transform;
       user-select: none;
+      white-space: pre;
       @include respond(phone) {
         font-size: calc($index * 1.3);
       }
@@ -61,7 +60,7 @@
     color: fuchsia;
   }
   100% {
-    transform: translateX(300px) translateY(-300px) rotate(420deg) scale(8);
+    transform: translateX(300px) translateY(-300px) rotate(420deg) scale(10);
     color: black;
     opacity: 0;
     filter: blur(30px);

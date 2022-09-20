@@ -1,8 +1,37 @@
 .swiper {
+  overflow: hidden;
   width: 100%;
   min-height: 100vh;
   background: $color-black;
   @include flexCenter;
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: $color-crimson;
+    margin: 0 2rem;
+    cursor: url('../cursors/Pointer_gauntlet_cast_on_32x32.webp'), pointer;
+  }
+  .swiper-pagination > .swiper-pagination-bullet {
+    opacity: 0.5;
+    background-color: $color-seagreen;
+  }
+  .swiper-pagination > .swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: $color-crimson;
+  }
+
+  .swiper__title {
+    color: $color-crimson;
+    text-align: center;
+    font-size: 5rem;
+    font-size: 3rem;
+    font-weight: 900;
+    font-family: assassin-st, sans-serif;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
 
   .swiper-slide {
     text-align: center;
@@ -46,7 +75,7 @@
     backdrop-filter: blur(8.6px);
     -webkit-backdrop-filter: blur(8.6px);
     border: 1px solid rgba(255, 255, 255, 1);
-    z-index: 2;
+    z-index: 10;
     position: relative;
   }
   .slide__wrap--circle {
@@ -58,7 +87,6 @@
       height: 30rem;
       border-radius: 50%;
       position: absolute;
-
       z-index: 1;
     }
     &::before {
@@ -67,11 +95,49 @@
       height: 40rem;
       top: -10rem;
       right: -10rem;
+      animation: slideCirclesRigth 20s linear infinite;
     }
     &::after {
       background-color: $color-fuchsia;
       bottom: -2rem;
       left: -10rem;
+      animation: slideCirclesLeft 20s linear 1s infinite;
     }
   }
+  #sass {
+    filter: brightness(0);
+  }
+}
+
+@keyframes slideCirclesRigth {
+  25% {
+    top: -20rem;
+    right: 30rem;
+    width: 20rem;
+    height: 20rem;
+  }
+  50% {
+    top: 30rem;
+    right: 30rem;
+  }
+  // 75% {
+  //   top: 30rem;
+  //   right: -10rem;
+  // }
+}
+@keyframes slideCirclesLeft {
+  25% {
+    bottom: -2rem;
+    left: 30rem;
+  }
+  50% {
+    bottom: 30rem;
+    left: 30rem;
+    width: 40rem;
+    height: 40rem;
+  }
+  // 75% {
+  //   bottom: 30rem;
+  //   left: -10rem;
+  // }
 }

@@ -1,114 +1,97 @@
 .portfolio {
-  min-height: 100vh;
-  position: relative;
-  color: $color-white;
   overflow: hidden;
-  background-image: url(../img/dungeon4.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: grid;
-  place-items: center;
-  filter: saturate(0.7);
-  z-index: 1;
-  &::before {
-    content: '';
+  .swiper {
     width: 100%;
-    height: calc($index * 10);
-    background-image: url(../img/ground.png);
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: calc($index * -5.5);
-    z-index: 10;
-    filter: brightness(0.8);
-  }
-  &::after {
-    content: '';
-    width: 100%;
-    height: calc($index * 10);
-    background-image: url(../img/ground.png);
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    bottom: calc($index * -4.5);
-    z-index: 10;
-    filter: brightness(0.8);
-  }
+    min-height: 100vh;
+    background: $color-black;
+    @include flexCenter;
 
-  .portfolio__wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    @include respond(phone) {
-      grid-template-columns: repeat(1, 1fr);
-    }
-    .card {
-      width: 30rem;
-      height: 18rem;
+    .slide__card {
+      width: 90rem;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(8.6px);
+      -webkit-backdrop-filter: blur(8.6px);
+      border: 1px solid rgba(255, 255, 255, 1);
+      z-index: 10;
       position: relative;
-      perspective: 100rem;
-      border: 1rem sandybrown solid;
-      border-radius: 2rem;
-      box-shadow: $box-shadow-card;
-      cursor: pointer;
-      @include respond(phone) {
-        width: 30rem;
-        height: 13rem;
-      }
-    }
-    .front,
-    .back {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      left: 0;
-      top: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: all 1s ease;
-      backface-visibility: hidden;
-      background-color: transparent;
-      overflow: hidden;
-      border-radius: 1rem;
-    }
-    .front {
-      box-shadow: $box-shadow-card;
-
       img {
-        max-width: 105%;
-        min-width: 105%;
-        height: auto;
-        object-fit: contain;
+        min-height: 60rem;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px $color-black;
       }
-    }
-    .back {
-      transform: rotateY(180deg);
-      background: #22c1c3; /* fallback for old browsers */
-      background: -webkit-linear-gradient(to right, #fdbb2d, #22c1c3);
-      background: linear-gradient(to right, #fdbb2d, #22c1c3);
-      box-shadow: $box-shadow-card;
-
       a {
-        color: $color-primary;
         font-size: 3rem;
-        font-weight: 900;
-        text-shadow: 3px 3px 5px $color-black;
-        @include respond(phone) {
-          font-size: 2rem;
-        }
+        font-weight: 600;
+        filter: drop-shadow(0 2px 1px $color-black);
         &:hover {
-          text-shadow: 2px 2px 1px $color-black;
-          transform: scale(0.98);
+          color: $color-seagreen;
+          cursor: url('../cursors/Pointer_gauntlet_cast_on_32x32.webp'), pointer;
         }
       }
-    }
-    .card:hover .front {
-      transform: rotateY(180deg);
-    }
-    .card:hover .back {
-      transform: rotateY(360deg);
     }
   }
+
+  .slide__wrap--circle {
+    position: relative;
+    &::after,
+    &::before {
+      content: '';
+      width: 50rem;
+      height: 50rem;
+      border-radius: 50%;
+      position: absolute;
+      z-index: 1;
+    }
+    &::before {
+      background-color: $color-seagreen;
+      width: 60rem;
+      height: 60rem;
+      top: -10rem;
+      right: -30rem;
+      animation: slideCirclesRigth 20s linear infinite;
+    }
+    &::after {
+      background-color: $color-darkorange;
+      bottom: -2rem;
+      left: -30rem;
+      animation: slideCirclesLeft 20s linear 1s infinite;
+    }
+  }
+
+
+  @keyframes slideCirclesRigth {
+  25% {
+    top: -10rem;
+    right: 60rem;
+    width: 50rem;
+    height: 50rem;
+  }
+  50% {
+    top: 20rem;
+    right: 30rem;
+  }
+  75% {
+    top: 20rem;
+    right: -10rem;
+  }
+}
+@keyframes slideCirclesLeft {
+  25% {
+    bottom: -2rem;
+    left: 30rem;
+  }
+  50% {
+    bottom: 30rem;
+    left: 30rem;
+    width: 40rem;
+    height: 40rem;
+  }
+  75% {
+    bottom: 30rem;
+    left: -10rem;
+  }
+}
 }

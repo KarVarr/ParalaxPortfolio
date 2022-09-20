@@ -1,228 +1,77 @@
-.showcase {
+.swiper {
+  width: 100%;
   min-height: 100vh;
-  position: relative;
-  color: $color-white;
-  overflow: hidden;
-  background-image: url(../img/dungeon3.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 1;
-  filter: saturate(.7);
-  &::before {
-    content: '';
-    width: 100%;
-    height: calc($index * 10);
-    background-image: url(../img/ground.png);
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    bottom: calc($index * -4.5);
-    z-index: 10;
-    filter: brightness(0.5);
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url(../img/light.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center -6.5rem;
-    animation: light 3s ease-in-out infinite;
-  }
-  .showcase__title {
-    color: $color-primary;
-    font-family: assassin-st, sans-serif;
-    font-size: calc($index * 1.8);
-    font-weight: 700;
+  background: $color-black;
+  @include flexCenter;
+
+  .swiper-slide {
     text-align: center;
-    text-transform: uppercase;
-    text-shadow: 0 0 15px $color-secondary;
-    letter-spacing: calc($index / 4.5);
-    transform: $parallax-effect;
-    will-change: transform;
-    @include respond(phone) {
-      font-size: calc($index * 3);
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    //my css
+    display: flex;
+    flex-direction: column;
+  }
+
+  .swiper-slide {
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    h2 {
+      font-size: 2rem;
+      font-weight: 900;
     }
   }
-  .showcase__content--wrapper {
-    padding: $padding12;
-    height: 100vh;
-    position: relative;
+
+  .slide__card {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.6px);
+    -webkit-backdrop-filter: blur(8.6px);
+    border: 1px solid rgba(255, 255, 255, 1);
     z-index: 2;
+    position: relative;
+  }
+  .slide__wrap--circle {
+    position: relative;
+    &::after,
     &::before {
       content: '';
+      width: 30rem;
+      height: 30rem;
+      border-radius: 50%;
       position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      background-image: url(../img/glow.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      animation: glow 1.8s ease-in-out infinite;
+
+      z-index: 1;
     }
-
-    //CAROUSEL
-    .showcase__content {
-      .showcase-carousel {
-        .swiper-wrapper {
-          transition: $transitionSlider;
-          .showcase-carousel__item.swiper-slide-active {
-            opacity: 0.95;
-            transform: scale(0.75);
-            @include respond(phone) {
-              transform: scale(0.9);
-            }
-          }
-
-          .showcase-carousel__item {
-            height: calc(100vh - 12rem * 2);
-            text-align: center;
-            position: relative;
-            opacity: 0.45;
-            transform: scale(0.45);
-            transition: opacity 1.8s $transitionSlider,
-              transform 1.8s $transitionSlider;
-            &::after {
-              content: '';
-              width: 12rem;
-              height: 10rem;
-              background-color: $color-black;
-              border-radius: 50%;
-              box-shadow: 0 0 65px 100px $color-black;
-              opacity: 0.6;
-              position: absolute;
-              bottom: -7rem;
-              left: calc(50% - 6rem);
-              transform: rotateX(70deg);
-            }
-            p {
-              width: 100%;
-              font-size: 5rem;
-              font-family: assassin-st, sans-serif;
-              position: absolute;
-              bottom: 0rem;
-              opacity: 0.7;
-              text-shadow: rgb(58 78 94) 0 0 10px;
-              z-index: 1;
-              @include respond(phone) {
-                opacity: 1;
-              }
-            }
-            .showcase-carausel__image-wrapper {
-              width: 100%;
-              height: 100%;
-              perspective: 15rem;
-              transform-style: preserve-3d;
-              position: absolute;
-              .showcase-carousel__image-left {
-                .showcase-caraousel__image {
-                  position: absolute;
-                  width: 100%;
-                  height: 100%;
-                  background-size: contain;
-                  background-position: center;
-                  background-repeat: no-repeat;
-                  filter: drop-shadow(0 5px 10px $color-black);
-                }
-
-                .image1 {
-                  background-image: url(../img/css.svg);
-                }
-                .image2 {
-                  background-image: url(../img/html.svg);
-                }
-                .image3 {
-                  background-image: url(../img/js.svg);
-                }
-                .image4 {
-                  background-image: url(../img/react.svg);
-                }
-                .image5 {
-                  background-image: url(../img/sass.svg);
-                }
-                .image6 {
-                  background-image: url(../img/figma-1-logo-svgrepo-com.svg);
-                }
-              }
-            }
-          }
-        }
-      }
+    &::before {
+      background-color: $color-deepskyblue;
+      width: 40rem;
+      height: 40rem;
+      top: -10rem;
+      right: -10rem;
     }
-    //navigation
-    .showcase-navigation {
-      overflow: hidden;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 2;
-      & > * {
-        position: absolute;
-        height: 100%;
-        width: 50%;
-        outline: none;
-        cursor: pointer;
-      }
-      & > *::before {
-        content: '?';
-        font-size: 4rem;
-        font-family: assassin-st;
-        position: absolute;
-        left: 5rem;
-        top: 50%;
-        opacity: 0;
-        transform: rotate(-90deg);
-        transition: 0.5s ease-out;
-      }
-      & > *:hover::before {
-        opacity: 0.45;
-      }
-
-      .showcase-navigation-next {
-        right: 0;
-        &::before {
-          transform: rotate(90deg);
-          right: 5rem;
-          left: auto;
-        }
-      }
+    &::after {
+      background-color: $color-fuchsia;
+      bottom: -2rem;
+      left: -10rem;
     }
-  }
-
-  
-}
-
-//animation
-
-@keyframes light {
-  0% {
-    opacity: 0.2;
-  }
-  50% {
-    opacity: 0.3;
-  }
-  100% {
-    opacity: 0.2;
-  }
-}
-
-@keyframes glow {
-  0% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 0.6;
   }
 }

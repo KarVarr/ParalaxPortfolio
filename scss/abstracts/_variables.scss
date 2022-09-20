@@ -8,9 +8,7 @@ $parallax-effect: translate3d(0, calc(var(--scrollTop) / 20), 0);
 $transitionPulse: transform 5s ease-in-out;
 $transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
 $transitionSlider: cubic-bezier(0.4, 0, 0, 1);
-$transitionSliderWrapper: cubic-bezier(0.7, -0.18, 0.04, 1.36
-);
-
+$transitionSliderWrapper: cubic-bezier(0.7, -0.18, 0.04, 1.36);
 
 //color
 $color-primary: #e7e7d3;
@@ -20,11 +18,15 @@ $color-black: #000000;
 $color-white: #ffffff;
 $color-blue: #3ea6aa;
 $color-ligth: #f8d229;
-
+$color-fuchsia: #ff00ff;
+$color-deepskyblue: #00bfff;
+$color-darkturquoise: #00ced1;
+$color-darkseagreen: #8fbc8f;
+$color-crimson: #dc143c;
+$color-aquamarine: #7fffd4;
+$color-aqua: #00ffff;
 
 //paddding
 $padding12: 12rem 0;
 
-
-       
-$box-shadow-card:  8px 8px 18px $color-black;
+$box-shadow-card: 8px 8px 18px $color-black;

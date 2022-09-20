@@ -4,7 +4,6 @@ body {
     sans-serif;
   font-size: 1.6rem;
   line-height: 1.55;
-
   //hide the scrollbar
   overflow: auto;
   -ms-overflow-style: none;
@@ -18,4 +17,6 @@ body {
 .container,
 .wrapper {
   will-change: transform;
+
+
 }

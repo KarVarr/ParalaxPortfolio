@@ -31,6 +31,7 @@
     top: 0;
     left: 50%;
     transform: translate(-50%, 0);
+    will-change: transform;
   }
 
   .swiper-slide {
@@ -96,12 +97,14 @@
       top: -10rem;
       right: -10rem;
       animation: slideCirclesRigth 20s linear infinite;
+      will-change: transform;
     }
     &::after {
       background-color: $color-fuchsia;
       bottom: -2rem;
       left: -10rem;
       animation: slideCirclesLeft 20s linear 1s infinite;
+      will-change: transform;
     }
   }
   #sass {

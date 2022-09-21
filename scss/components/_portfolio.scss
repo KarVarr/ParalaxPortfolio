@@ -21,6 +21,7 @@
         min-height: 60rem;
         border-radius: 8px;
         box-shadow: 0 5px 15px $color-black;
+        filter: opacity(0.8);
       }
       a {
         font-size: 3rem;
@@ -51,47 +52,48 @@
       height: 60rem;
       top: -10rem;
       right: -30rem;
-      animation: slideCirclesRigth 20s linear infinite;
+      animation: slideCirclesRigth2 20s linear infinite;
+      will-change: transform;
     }
     &::after {
       background-color: $color-darkorange;
       bottom: -2rem;
       left: -30rem;
-      animation: slideCirclesLeft 20s linear 1s infinite;
+      animation: slideCirclesLeft2 20s linear 1s infinite;
+      will-change: transform;
     }
   }
 
-
-  @keyframes slideCirclesRigth {
-  25% {
-    top: -10rem;
-    right: 60rem;
-    width: 50rem;
-    height: 50rem;
+  @keyframes slideCirclesRigth2 {
+    25% {
+      top: -10rem;
+      right: 60rem;
+      width: 50rem;
+      height: 50rem;
+    }
+    50% {
+      top: 20rem;
+      right: 30rem;
+    }
+    75% {
+      top: 20rem;
+      right: -10rem;
+    }
   }
-  50% {
-    top: 20rem;
-    right: 30rem;
+  @keyframes slideCirclesLeft2 {
+    25% {
+      bottom: -2rem;
+      left: 30rem;
+    }
+    50% {
+      bottom: 30rem;
+      left: 30rem;
+      width: 40rem;
+      height: 40rem;
+    }
+    75% {
+      bottom: 30rem;
+      left: -10rem;
+    }
   }
-  75% {
-    top: 20rem;
-    right: -10rem;
-  }
-}
-@keyframes slideCirclesLeft {
-  25% {
-    bottom: -2rem;
-    left: 30rem;
-  }
-  50% {
-    bottom: 30rem;
-    left: 30rem;
-    width: 40rem;
-    height: 40rem;
-  }
-  75% {
-    bottom: 30rem;
-    left: -10rem;
-  }
-}
 }

@@ -7,6 +7,7 @@ $parallax-effect: translate3d(0, calc(var(--scrollTop) / 20), 0);
 //transition
 $transitionPulse: transform 5s ease-in-out;
 $transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+$transitionLink: all 0.3s ease;
 $transitionSlider: cubic-bezier(0.4, 0, 0, 1);
 $transitionSliderWrapper: cubic-bezier(0.7, -0.18, 0.04, 1.36);
 
@@ -23,13 +24,19 @@ $color-deepskyblue: #00bfff;
 $color-darkturquoise: #00ced1;
 $color-darkseagreen: #8fbc8f;
 $color-crimson: #dc143c;
-$color-aquamarine: #7fffd4;
 $color-aqua: #00ffff;
+$color-aquamarine: #7fffd4;
 $color-lime: #00ff00;
 $color-seagreen: #2e8b57;
 $color-darkorange: #ff8c00;
+$color-yellow: #f9e603;
+$color-darkgreen: #051314;
 
 //paddding
 $padding12: 12rem 0;
 
+//shadow
 $box-shadow-card: 8px 8px 18px $color-black;
+
+//cursor
+$cousorPointer: url('../cursors/Pointer_gauntlet_cast_on_32x32.webp'), pointer;

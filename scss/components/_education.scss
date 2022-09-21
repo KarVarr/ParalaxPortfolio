@@ -1,64 +1,145 @@
 .education {
+  position: relative;
+  background-color: $color-darkgreen;
+  .swiper__line {
+    width: 3rem;
+    height: 1rem;
+    border-radius: 1rem;
+    z-index: 10;
+  }
+  .line-1 {
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    height: 2rem;
+    width: 5rem;
+    background-color: $color-fuchsia;
+    animation: line2 8s ease-in infinite;
+  }
+
+  .line-2 {
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: $color-crimson;
+    animation: line 8s linear 1s infinite;
+  }
+
+  .line-3 {
+    position: absolute;
+    top: 40%;
+    left: 0%;
+    width: 7rem;
+    background-color: $color-deepskyblue;
+    animation: line 8s ease 5s infinite;
+  }
+  .line-4 {
+    position: absolute;
+    top: 60%;
+    left: 0%;
+    background-color: $color-lime;
+    animation: line 8s linear 2s infinite;
+  }
+  .line-5 {
+    position: absolute;
+    top: 80%;
+    left: 0%;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: $color-darkorange;
+    animation: line 8s linear 7s infinite;
+    will-change: transform;
+  }
+  .line-6 {
+    position: absolute;
+    top: 90%;
+    left: 0%;
+    background-color: $color-seagreen;
+    animation: line2 10s ease-in-out 1s infinite;
+    will-change: transform;
+  }
+
   .swiper {
-    width: 50%;
-    min-height: 100vh;
-    background: $color-black;
-    @include flexCenter;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-image: linear-gradient(
+      to bottom,
+      #000000,
+      #060406,
+      #08090e,
+      #060e13,
+      $color-darkgreen
+    );
   }
 
   .swiper-slide {
-    height: 80rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 18px;
-    font-size: 22px;
-    font-weight: bold;
-    color: #fff;
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 1);
+    backface-visibility: hidden;
+    overflow: hidden;
 
-    img {
-      padding: 3rem;
-      border-radius: 9px;
+    box-shadow: 0 0 15px $color-aquamarine;
+    animation: shadow 4s linear infinite;
+    will-change: transform;
+
+    &:hover {
+      animation: none;
+      box-shadow: 0 0 30px $color-deepskyblue;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      border-radius: 16px 16px 0 0;
+      box-shadow: 0 10px 20px $color-black;
+    }
+
+    a {
+      font-size: 2rem;
+      font-weight: 600;
+      filter: drop-shadow(0 2px 1px $color-black);
+      &:hover {
+        color: $color-seagreen;
+        cursor: url('../cursors/Pointer_gauntlet_cast_on_32x32.webp'), pointer;
+      }
     }
   }
+}
 
-  .swiper-slide:nth-child(1n) {
-    background-color: rgb(206, 17, 17);
+@keyframes shadow {
+  25% {
+    box-shadow: 0 0 15px $color-fuchsia;
   }
 
-  .swiper-slide:nth-child(2n) {
-    background-color: rgb(0, 140, 255);
+  75% {
+    box-shadow: 0 0 15px $color-deepskyblue;
   }
+}
 
-  .swiper-slide:nth-child(3n) {
-    background-color: rgb(10, 184, 111);
+@keyframes line {
+  100% {
+    left: 100%;
   }
+}
 
-  .swiper-slide:nth-child(4n) {
-    background-color: rgb(211, 122, 7);
+@keyframes line2 {
+  50% {
+    left: 100%;
   }
-
-  .swiper-slide:nth-child(5n) {
-    background-color: rgb(118, 163, 12);
-  }
-
-  .swiper-slide:nth-child(6n) {
-    background-color: rgb(180, 10, 47);
-  }
-
-  .swiper-slide:nth-child(7n) {
-    background-color: rgb(35, 99, 19);
-  }
-
-  .swiper-slide:nth-child(8n) {
-    background-color: rgb(0, 68, 255);
-  }
-
-  .swiper-slide:nth-child(9n) {
-    background-color: rgb(218, 12, 218);
-  }
-
-  .swiper-slide:nth-child(10n) {
-    background-color: rgb(54, 94, 77);
+  0% {
+    left: 0%;
   }
 }

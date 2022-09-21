@@ -65,8 +65,8 @@ var swiper = new Swiper('.mySwiper2', {
     clickable: true,
   },
   navigation: {
-    nextEl: '.swiper2-button-next',
-    prevEl: '.swiper2-button-prev',
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
 });
 
@@ -81,5 +81,5 @@ var swiper = new Swiper('.mySwiper3', {
     depth: 100,
     modifier: 1,
     slideShadows: true,
-  }
+  },
 });

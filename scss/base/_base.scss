@@ -1,7 +1,8 @@
 body {
+  scroll-behavior: smooth;
   background-color: $color-black;
-  font-family: raleway_f, assassin-st, system-ui, -apple-system, BlinkMacSystemFont,
-    sans-serif;
+  font-family: raleway_f, assassin-st, system-ui, -apple-system,
+    BlinkMacSystemFont, sans-serif;
   font-size: 1.6rem;
   line-height: 1.55;
   //hide the scrollbar
@@ -17,6 +18,4 @@ body {
 .container,
 .wrapper {
   will-change: transform;
-
-
 }

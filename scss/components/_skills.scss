@@ -9,7 +9,10 @@
   .swiper-button-prev {
     color: $color-crimson;
     margin: 0 2rem;
-    cursor: url('../cursors/Pointer_gauntlet_cast_on_32x32.webp'), pointer;
+    cursor: $cousorPointer;
+    @include respond(tablet) {
+      margin: 0 0.3rem;
+    }
   }
   .swiper-pagination > .swiper-pagination-bullet {
     opacity: 0.5;
@@ -78,6 +81,10 @@
     border: 1px solid rgba(255, 255, 255, 1);
     z-index: 10;
     position: relative;
+    @include respond(tablet) {
+      overflow: hidden;
+      width: 37rem;
+    }
   }
   .slide__wrap--circle {
     position: relative;
@@ -98,6 +105,9 @@
       right: -10rem;
       animation: slideCirclesRigth 20s linear infinite;
       will-change: transform;
+      @include respond(tablet) {
+        animation: none;
+      }
     }
     &::after {
       background-color: $color-fuchsia;
@@ -105,6 +115,9 @@
       left: -10rem;
       animation: slideCirclesLeft 20s linear 1s infinite;
       will-change: transform;
+      @include respond(tablet) {
+        animation: none;
+      }
     }
   }
   #sass {
@@ -123,15 +136,14 @@
     top: 30rem;
     right: 30rem;
   }
-  // 75% {
-  //   top: 30rem;
-  //   right: -10rem;
-  // }
 }
 @keyframes slideCirclesLeft {
   25% {
     bottom: -2rem;
     left: 30rem;
+    @include respond(tablet) {
+      left: 5rem;
+    }
   }
   50% {
     bottom: 30rem;
@@ -139,8 +151,4 @@
     width: 40rem;
     height: 40rem;
   }
-  // 75% {
-  //   bottom: 30rem;
-  //   left: -10rem;
-  // }
 }

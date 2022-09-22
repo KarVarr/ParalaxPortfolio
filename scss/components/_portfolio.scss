@@ -19,16 +19,21 @@
       position: relative;
       @include respond(tablet) {
         overflow: hidden;
-        width: 65rem;
+        max-width: 65rem;
       }
-      @include respond(tablet) {
-        width: 37rem;
+      @include respond(phone) {
+        max-width: 37rem;
+        backdrop-filter: blur(13px);
+        -webkit-backdrop-filter: blur(13px);
       }
       img {
         min-height: 60rem;
         border-radius: 8px;
         box-shadow: 0 5px 15px $color-black;
         filter: opacity(0.8);
+        @include respond(phone) {
+          min-height: auto;
+        }
       }
       a {
         font-size: 3rem;
@@ -59,17 +64,22 @@
     }
     &::before {
       background-color: $color-seagreen;
-      width: 60rem;
-      height: 60rem;
+      width: 40rem;
+      height: 40rem;
       top: -10rem;
       right: -30rem;
       animation: slideCirclesRigth2 20s linear infinite;
       will-change: transform;
       @include respond(tablet) {
-        width: 20rem;
-        height: 20rem;
-        right: -10rem;
+        width: 35rem;
+        height: 35rem;
+        right: -1rem;
         animation: none;
+      }
+      @include respond(phone) {
+        top: -4rem;
+        width: 13rem;
+        height: 13rem;
       }
     }
     &::after {
@@ -79,11 +89,16 @@
       animation: slideCirclesLeft2 20s linear 1s infinite;
       will-change: transform;
       @include respond(tablet) {
-        width: 40rem;
-        height: 40rem;
-        left: -7rem;
+        width: 43rem;
+        height: 43rem;
+        left: -2rem;
         bottom: -5rem;
         animation: none;
+      }
+      @include respond(phone) {
+        bottom: -8rem;
+        width: 23rem;
+        height: 23rem;
       }
     }
   }
@@ -92,8 +107,8 @@
     25% {
       top: -10rem;
       right: 60rem;
-      width: 50rem;
-      height: 50rem;
+      width: 30rem;
+      height: 30rem;
     }
     50% {
       top: 20rem;

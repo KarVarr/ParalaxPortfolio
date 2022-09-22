@@ -6,8 +6,8 @@
   background: linear-gradient(to bottom, #040805, $color-black);
 
   .main__article--content {
+    max-width: 60rem;
     margin: 0 2.5rem;
-    text-align: center;
     transition: $transition;
     .main__article__title {
       font-family: assassin-st, sans-serif;
@@ -24,11 +24,11 @@
       }
     }
     .main__article__subtitle {
-      font-size: calc($index * 1);
+      font-size: 1.6rem;
       transform: $parallax-effect;
       will-change: transform;
       user-select: none;
-      white-space: pre;
+      // white-space: pre;
       @include respond(phone) {
         white-space: unset;
       }

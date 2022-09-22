@@ -51,6 +51,9 @@ var swiper = new Swiper('.mySwiper1', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  autoplay: {
+    delay: 3000,
+  },
 });
 
 var swiper = new Swiper('.mySwiper2', {
@@ -68,6 +71,9 @@ var swiper = new Swiper('.mySwiper2', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  autoplay: {
+    delay: 3000,
+  },
 });
 
 var swiper = new Swiper('.mySwiper3', {
@@ -81,5 +87,8 @@ var swiper = new Swiper('.mySwiper3', {
     depth: 100,
     modifier: 1,
     slideShadows: true,
+  },
+  autoplay: {
+    delay: 5000,
   },
 });

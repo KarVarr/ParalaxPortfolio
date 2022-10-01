@@ -30,7 +30,7 @@
         min-height: 60rem;
         border-radius: 8px;
         box-shadow: 0 5px 15px $color-black;
-        filter: opacity(0.8);
+        filter: opacity(0.95);
         @include respond(phone) {
           min-height: auto;
         }

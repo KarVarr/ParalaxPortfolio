@@ -51,9 +51,6 @@ var swiper = new Swiper('.mySwiper1', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  autoplay: {
-    delay: 3000,
-  },
 });
 
 var swiper = new Swiper('.mySwiper2', {
@@ -70,9 +67,6 @@ var swiper = new Swiper('.mySwiper2', {
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
-  },
-  autoplay: {
-    delay: 3000,
   },
 });
 

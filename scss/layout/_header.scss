@@ -4,7 +4,7 @@
     content: '';
     width: 100%;
     height: calc($index * 10);
-    background-image: url(../img/ground.png);
+    background-image: url(../img/ground.webp);
     background-size: cover;
     background-position: center;
     position: absolute;
@@ -64,16 +64,16 @@
       transition: $transition;
     }
     .layers__base {
-      background-image: url(../img/layer-base.png);
+      background-image: url(../img/layer-base.webp);
       transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
       z-index: 0;
     }
     .layers__middle {
-      background-image: url(../img/layer-middle.png);
+      background-image: url(../img/layer-middle.webp);
       transform: translate3d(0, calc(var(--scrollTop) / 2.6), 0);
     }
     .layers__front {
-      background-image: url(../img/layer-front.png);
+      background-image: url(../img/layer-front.webp);
       transform: translate3d(0, calc(var(--scrollTop) / 5.6), 0);
     }
   }

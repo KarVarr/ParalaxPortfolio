@@ -129,10 +129,10 @@
       @include respond(tablet) {
         animation: none;
       }
-       @include respond(phone) {
+      @include respond(phone) {
         width: 30rem;
         height: 30rem;
-        bottom:  -2rem;
+        bottom: -2rem;
         left: -1rem;
       }
     }

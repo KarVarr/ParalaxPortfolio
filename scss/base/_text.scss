@@ -31,3 +31,16 @@
     font-size: calc($index * 3);
   }
 }
+  .swiper__title {
+    color: $color-crimson;
+    text-align: center;
+    font-size: 5rem;
+    font-size: 3rem;
+    font-weight: 900;
+    font-family: assassin-st, sans-serif;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    will-change: transform;
+  }

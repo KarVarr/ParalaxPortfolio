@@ -6,6 +6,10 @@
     background: $color-black;
     @include flexCenter;
 
+    
+
+
+
     .slide__card {
       width: 90rem;
       padding: 2rem;
@@ -28,7 +32,7 @@
       }
       img {
         min-height: 60rem;
-          min-height: auto;
+        min-height: auto;
 
         border-radius: 8px;
         box-shadow: 0 5px 15px $color-black;

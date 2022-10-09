@@ -6,10 +6,6 @@
     background: $color-black;
     @include flexCenter;
 
-    
-
-
-
     .slide__card {
       width: 90rem;
       padding: 2rem;
@@ -77,10 +73,13 @@
       right: -30rem;
       animation: slideCirclesRigth2 20s linear infinite;
       will-change: transform;
-      @include respond(tablet) {
+      @include respond(tablet-land) {
         width: 35rem;
         height: 35rem;
         right: -1rem;
+        //animation: none;
+      }
+      @include respond(tablet) {
         animation: none;
       }
       @include respond(phone) {
@@ -93,13 +92,16 @@
       background-color: $color-darkorange;
       bottom: -2rem;
       left: -30rem;
-      animation: slideCirclesLeft2 20s linear 1s infinite;
+      animation: slideCirclesLeft2 20s linear -1s infinite;
       will-change: transform;
-      @include respond(tablet) {
+      @include respond(tablet-land) {
         width: 43rem;
         height: 43rem;
         left: -2rem;
         bottom: -5rem;
+        // animation: none;
+      }
+      @include respond(tablet) {
         animation: none;
       }
       @include respond(phone) {

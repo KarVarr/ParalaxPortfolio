@@ -6,4 +6,5 @@
 - Js
 - Swiper JS
 
-## My second portfolio as a front-end developer.
+## [Link](https://karvarr.github.io/ParallaxPortfolio/)
+

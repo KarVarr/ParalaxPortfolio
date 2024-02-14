@@ -1,4 +1,5 @@
 # ParallaxPortfolio
+My second portfolio with magical parallax effects!
 
 ### Used this stack
 - html 
